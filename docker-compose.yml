@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  sample:
+    build:
+      context: .
+    image: hotelappz/node-boilerplate
+    ports:
+      - "3146:3146"
+    depends_on:
+      - mongoDBConfig
+
+  mongoDBConfig:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./data:/data/db"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root

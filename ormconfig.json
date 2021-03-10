@@ -1,0 +1,9 @@
+{
+  "type": "mongodb",
+  "url": "mongodb://localhost:27017/HotelAppz",
+  "useNewUrlParser": true,
+  "synchronize": true,
+  "useUnifiedTopology": true,
+  "logging": true,
+  "entities": ["src/entity/*.*"]
+}

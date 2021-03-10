@@ -1,0 +1,68 @@
+POST http://localhost:3146/login
+Content-Type: application/x-www-form-urlencoded
+
+username=h1&passwordhash=1234
+
+// Success Response
+# {
+#   "status": "success",
+#   "data": {
+#     "data": {
+#       "_id": "60472b5ca65d961b5100e137",
+#       "userId": "5013E755-71F2-4D07-AE31-1B9D7C194AB1",
+#       "userInformations": {
+#         "name": "Hannibal DuMont",
+#         "email": "dumont@bd-apartment.com",
+#         "userName": "h1",
+#         "passwordhash": "1234",
+#         "department": "sales",
+#         "type": "admin",
+#         "image": null,
+#         "credits": {
+#           "total": 14556,
+#           "used": 1200,
+#           "left": 12556
+#         }
+#       },
+#       "accounts": [
+#         {
+#           "accountId": "4D8825CB-37E1-48C2-9761-89DC960F520B",
+#           "accountName": "Stayery",
+#           "properties": [
+#             {
+#               "propertyId": "FD7F6C28-2031-41B4-A231-4CF3AAB461D2",
+#               "propertyName": "Berlin Friedrichshain"
+#             },
+#             {
+#               "propertyId": "F7974BD8-AFBB-4EA3-AB83-A305180F7849",
+#               "propertyName": "Bielefeld Hauptbahnhof"
+#             }
+#           ]
+#         }
+#       ],
+#       "guiModules": [],
+#       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTUzODcyNTIsImRhdGEiOnsidXNlcm5hbWUiOiJoMSIsInBhc3N3b3JkaGFzaCI6IjEyMzQifSwiaWF0IjoxNjE1MzgzNjUyfQ.Pbbtygrt9HCo5uSVG44x-2hDIuz4aXxVeBuTgyW3dqA"
+#     },
+#     "message": "User data found"
+#   },
+#   "errors": {},
+#   "message": ""
+# }
+
+###
+POST http://localhost:3146/login
+Content-Type: application/x-www-form-urlencoded
+
+username=h1&passwordhash=12345
+
+//Failure response
+
+# {
+#   "status": "success",
+#   "data": {
+#     "data": {},
+#     "message": "Authentication failed as user not found with provided credentials"
+#   },
+#   "errors": {},
+#   "message": ""
+# }

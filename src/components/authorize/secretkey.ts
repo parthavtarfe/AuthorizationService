@@ -1,0 +1,1 @@
+export const JWTTOKENSECRETKEY = "kjfkwjb133423nrl5n7fyyfu";
